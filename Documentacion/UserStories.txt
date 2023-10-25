@@ -1,0 +1,111 @@
+Fecha: 19/10/2023 al 22/10/2023 sacar usert story 1 y 2
+
+
+User Story 1
+Como alumno
+quiero poder generar un perfil del alumno en el que podra completar los siguientes datos:
+  email
+  contraseña 
+  foto
+  datos personales como:
+    dni
+    celular
+    mail
+    año de nacimiento
+    skills
+  materias aprobadas
+  preferencia de trabajo
+Para poder visualizarlo y a su vez que los recluters lo visualicen
+
+Requisitos funcionales:
+Necesito generar un perfil
+Necesito generar un formulario 
+Necesito generar un registro del usuario
+Necesito generar un login del usuario
+
+Requisitos no funcionales
+Necesito persistir datos de las materias de la carrera
+Necesito persistir el login
+Necesito persistir el registro del usuario
+Necesito persistir el formulario del usuario
+Necesito una interfaz login
+Necesito una interfaz registro
+Necesito una interfaz formulario de datos personales
+Necesito una interfaz formulario de materias
+Necesito una interfaz preferencia de trabajos
+Necesito generar la logica de negocio login
+Necesito generar la logica de negocio registro
+Necesito generar la logica de negocio de los formularios con sus validaciones
+Necesito generar la logica de negocios de agregar preferencia de trabajos
+
+Herramientas sql, php, html y css con bootstrap
+
+
+User Story 2
+Como alumno 
+Quiero poder completar mis materias aprobadas
+Para que se generen los skills que tengo y sean agregados a mi perfil
+
+Requisitos funcionales
+Necesito tener mis skills en base a las materias aprobadas
+Necesito que esos skills se agreguen a mi perfil
+
+Requisitos no funcionales
+Necesito completar la base de datos con las materias y sus skills
+Necesito una logica de negocio que relacione los skills con las materias
+Necesito una logica de negocio que agregue los skills al perfil en la parte skills
+
+Herramientas sql, php, html y css con bootstrap
+
+User Story 3
+Como alumno
+Quiero poder ver el portal registrado por reclutadores y postularme
+Para que los reclutadores vean las postulaciones
+
+User Story 4
+Como profesor 
+Quiero poder ver el perfil del alumno
+Para interactuar con el mismo
+
+User Story 5
+Como profesor 
+Quiero poder validar los skills de los alumnos
+Para que los alumnos tengan validadas las skills
+
+User Story 6
+Como alumno 
+Quiero poder ver las ofertas de trabajo por filtros de habilidades como php, c, sql, etc
+Para poder postularme mejor
+
+User Story 7
+Como empresa 
+Quiero poder registrarme con datos basicos de mi empresa, que son email y contraseña 
+Para poder interactuar con la aplicacion
+
+User Story 8
+Como empresa quiero poder postular ofertas de trabajo 
+Para que los alumnos puedan verlas y postularse
+
+User Story 9
+Como alumno 
+Quiero que la aplicacion herede las skills que tengo desde las materias que tengo aprobadas que ingrese en el registro
+Para mostrar mis skills en mi perfil
+
+Limite de la user story:
+El sistema ya tendra garcado en la base de datos los skills relacionados con las materias
+
+User Story 10
+Como alumno 
+Quiero ver el porcentaje de mi perfil completado en una barra de estado
+Para estar al tanto de mis datos de registro
+
+User Story 11
+Como reclutador 
+Quiero ver mi perfil 
+Para interactuar con el mismo 
+
+
+
+
+
+
