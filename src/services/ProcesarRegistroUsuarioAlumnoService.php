@@ -1,8 +1,11 @@
 <?php
+
 error_reporting(E_ALL);
+
 ini_set('display_errors', 1);
-require_once '../services/PerfilDelUsuarioAlumno.php';
-require_once '../services/UsuarioAlumnoRegistrado.php';
+
+require 'src/services/PerfilDelUsuario.php';
+echo "hola";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST["email"];
@@ -15,18 +18,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!preg_match($objetivoRegex, $objetivo) && !empty($objetivo)) {
     $errores[] = "El objetivo debe tener entre 10 y 50 caracteres.";
   }
-
   if (!preg_match($emailRegex, $email) && !empty($email)) {
-    $errores[] = "Debe ser un email valido.";
+    $errores[] = "El email debe ser valido.";
   }
-
 
   if (!empty($errores)) {
     foreach ($errores as $error) {
       echo $error . "<br>";
     }
   } else {
-    echo "Registro exitoso. ¡Bienvenido!";
+    $datosDeRegistro=[$email,$objetivo];
+    $usuarioAlumno = new $PerfilDelUsuario("sofia","1234", $datosDeRegistro)->registro(); 
   }
 }
 ?>

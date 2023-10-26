@@ -1,5 +1,8 @@
 <?php
- 
+
+error_reporting(E_ALL);
+
+ini_set('display_errors', 1); 
 class UsuarioAlumnoRegistrado{
     protected $nombreCompleto;
     protected $email;
@@ -11,9 +14,10 @@ class UsuarioAlumnoRegistrado{
     protected $skills;
     protected $materiasAprobadas;
     protected $preferenciaDeTrabajo;
+    protected $objetivo;
 
-    public function __construct($nombreDeUsuario, $contrasena,$datosDeRegistro) {
-      $this->nombreCompleto = $datosDeRegistro['nombreCompleto'];
+    public function __construct($datosDeRegistro) {
+      /*$this->nombreCompleto = $datosDeRegistro['nombreCompleto'];
       $this->email = $datosDeRegistro['email'];
       $this->foto = $datosDeRegistro['foto'];
       $this->datosPersonales = $datosDeRegistro['datosPersonales'];
@@ -23,6 +27,12 @@ class UsuarioAlumnoRegistrado{
       $this->skills = $datosDeRegistro['skills'];
       $this->materiasAprobadas = $datosDeRegistro['materiasAprobadas'];
       $this->preferenciaDeTrabajo = $datosDeRegistro['preferenciaDeTrabajo'];
+       */
+      $this->objetivo = $datosDeRegistro['objetivo']; 
+      $this->email = $datosDeRegistro['email']; 
+    }
+    public function agregarSkill(){
+      return $datosDeRegistro['skill'];
     }
 
 }

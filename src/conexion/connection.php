@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+
+ini_set('display_errors', 1);
 class Connection{
   private static $instance;
   private $connection;
@@ -27,15 +30,19 @@ class Connection{
     $password = "n";
 
     $mysqli = new mysqli($server,$username,$password,$database);
-
-    if ($mysqli->connect_errno)
-      die("fallo la conexion: {$mysqli->connect_error}");
-
-    $setnames = $mysqli->prepare("SET NAMES 'utf8'");
-    $setnames->execute();
-
+    $this->validateConnection($mysqli);
+    $this->setnamesConnection($mysqli);
     $this->connection = $mysqli;
 
+  }
+  private function validateConnection(mysqli $mysqli){
+    if ($mysqli->connect_errno)
+      die("fallo la conexion: {$mysqli->connect_error}");
+  }
+
+  private function setnamesConnection(mysqli $mysqli){
+    $setnames = $mysqli->prepare("SET NAMES 'utf8'");
+    $setnames->execute();
   }
 
 }
