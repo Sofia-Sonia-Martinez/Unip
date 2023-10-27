@@ -31,8 +31,8 @@ class UsuarioAlumnoRegistrado{
       $this->objetivo = $datosDeRegistro['objetivo']; 
       $this->email = $datosDeRegistro['email']; 
     }
-    public function agregarSkill(){
+   /* public function agregarSkill(){
       return $datosDeRegistro['skill'];
-    }
+   }*/
 
 }

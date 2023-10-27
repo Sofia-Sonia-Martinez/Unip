@@ -8,12 +8,12 @@ class Connection{
   private $connection;
 
   private function __construct(){
-    $this->make_connection();
+    $this->makeConnection();
   }
 
   public static function getInstance(){
     if(!self::$instance instanceof self)
-      self==$instance = new self();
+      self::$instance = new self();
     return self::$instance;
   }
   

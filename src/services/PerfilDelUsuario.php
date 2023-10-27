@@ -1,6 +1,6 @@
 <?php
-require 'src/agents/RegistrarUsuarioAlumnoAgent.php';
-require 'src/services/UsuarioAlumnoRegistrado.php';
+require '../agents/RegistrarUsuarioAlumnoAgent.php';
+require  'UsuarioAlumnoRegistrado.php';
 
 error_reporting(E_ALL);
 
@@ -15,7 +15,7 @@ class PerfilDelUsuario{
     $this->nombreDeUsuario = $nombreDeUsuario;
     $this->contrasena = $contrasena;
     $this->datosDeRegistro = $datosDeRegistro;
-    $this->estaLogeado = $false;
+    $this->estaLogeado = false;
   }
 
   public function login($nombreDeUsuario, $contrasena) {
@@ -38,7 +38,7 @@ class PerfilDelUsuario{
   public function registro() {
 
     $agente = new RegistrarUsuarioAlumnoAgent();
-    $agente->consultarDatos();
+    $agente->insertarDatos($this->datosDeRegistro);
 
     $usuarioRegistrado = new UsuarioAlumnoRegistrado($this->datosDeRegistro);
     return $usuarioRegistrado;

@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 ini_set('display_errors', 1);
 
-require 'src/services/PerfilDelUsuario.php';
+require 'PerfilDelUsuario.php';
 echo "hola";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -28,7 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   } else {
     $datosDeRegistro=[$email,$objetivo];
-    $usuarioAlumno = new $PerfilDelUsuario("sofia","1234", $datosDeRegistro)->registro(); 
+    $usuarioAlumno = new PerfilDelUsuario("sofia","1234", $datosDeRegistro);
+    $usuarioAlumno->registro(); 
   }
 }
 ?>
